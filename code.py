@@ -112,7 +112,7 @@ checkpoint = ModelCheckpoint("currentWeight.h5",
 #                         restore_best_weights = True)
 
 # we put our call backs into a callback list
-callbacks = [earlystop, checkpoint]
+callbacks = [checkpoint] #[earlystop,] ]
 
 # We use a very small learning rate 
 model.compile(loss = 'categorical_crossentropy',
