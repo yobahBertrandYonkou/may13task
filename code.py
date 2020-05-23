@@ -105,11 +105,11 @@ checkpoint = ModelCheckpoint("currentWeight.h5",
                              save_best_only = True,
                              verbose=1)
 
-earlystop = EarlyStopping(monitor = 'val_loss', 
-                          min_delta = 0, 
-                          patience = 3,
-                          verbose = 1,
-                          restore_best_weights = True)
+#earlystop = EarlyStopping(monitor = 'val_loss', 
+#                         min_delta = 0, 
+#                         patience = 3,
+#                         verbose = 1,
+#                         restore_best_weights = True)
 
 # we put our call backs into a callback list
 callbacks = [earlystop, checkpoint]
