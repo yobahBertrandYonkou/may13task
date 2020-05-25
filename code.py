@@ -110,7 +110,7 @@ model.fit(xtrain, ytrain, epochs=epoch, batch_size=batchSize)
 # In[15]:
 
 
-print(model.evaluate(xtest, ytest,)[1]*100)
+acc = model.evaluate(xtest, ytest,)[1]*100
 
 
 os.system("curl -u admin:yobah11111 http://192.168.172.3:8080/job/accGetter/build?token=getAccuracy")
